@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  font-family: "Montserrat", serif;
+}
+.home-main {
+  background-image: url("./assets/images/bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slogan {
+  color: #f4e4a1;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0 #fa7204, 1px -1px 0 #fa7204, -1px 1px 0 #fa7204,
+    -1px -1px 0 #fa7204, 1px 0 0 #fa7204, 0 1px 0 #fa7204, -1px 0 0 #fa7204,
+    0 -1px 0 #fa7204;
+}
+/* Đảm bảo chiều rộng của swiper */
+.mySwiper {
+  width: 250px;
+  margin: 0 auto; /* Canh giữa */
+}
+
+/* Đảm bảo các slide không bị cắt */
+.slide-item {
+  position: relative;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Nút live */
+.live-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Ảnh trong slide */
+.slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Pagination */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px; /* Đảm bảo pagination nằm dưới ảnh */
+  left: 50%;
+  transform: translateX(-50%); /* Căn giữa pagination */
+  z-index: 10; /* Đảm bảo không bị ảnh che */
+}
+
+.main-slider {
+  position: relative;
+}
+
+/* Màu sắc của các chấm */
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  opacity: 1;
+  transition: background-color 0.3s;
+}
+
+/* Khi chấm được chọn */
+.swiper-pagination-bullet-active {
+  background-color: #ffba41 !important;
+}
+/* Điều chỉnh pagination */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  position: absolute; /* Đảm bảo rằng pagination được đặt chính xác */
+  bottom: -30px !important; /* Đảm bảo pagination luôn nằm dưới */
+  z-index: 10 !important; /* Đảm bảo pagination không bị che khuất */
+}
+.box-login {
+  position: relative;
+}
+.tab-dang-nhap {
+  position: absolute;
+}
+.button-login {
+  position: absolute;
+  bottom: 40px;
+  cursor: pointer;
+}
+.logForm {
+  position: absolute;
+  top: 80px;
+}
+.instyle {
+  background: linear-gradient(
+    to bottom,
+    #ffecd4 0,
+    #553418 30%,
+    #fee9b9 50%,
+    #553418 70%,
+    #fffcc3 100%
+  );
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 1.5px;
+}
+.form-control {
+  height: 48px;
+  background: #000 !important;
+  border: none !important;
+  outline: 0 !important;
+  margin: 0 auto;
+  padding-right: 45px;
+  padding-left: 45px;
+  font-size: 14px;
+  color: #ffcc7e !important;
+  border-radius: 15px;
+  text-align: center;
+}
+.icon-input {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  display: inline-block;
+  cursor: pointer;
+  height: 48px;
+  width: 25px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #383838;
+}
+.icon-input-2 {
+  position: absolute;
+  left: 15px;
+  top: 75px;
+  display: inline-block;
+  cursor: pointer;
+  height: 48px;
+  width: 25px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #383838;
+}
+
+.icon-input-2 {
+  position: absolute;
+  left: 15px;
+  top: 75px;
+  display: inline-block;
+  cursor: pointer;
+  height: 48px;
+  width: 25px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #383838;
+}
+.icon-3 {
+  right: 20px;
+}
