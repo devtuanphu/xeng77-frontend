@@ -33,14 +33,14 @@ function App() {
               </div>
             </div>
             <div className="col-span-12 md:col-span-4">
-              <div className="flex justify-center box-login p-10 md:p-0">
-                <img src={bgForm} alt="" />
-                <div className="tab-dang-nhap">
+              <div className="flex justify-center box-login p-10 md:p-2">
+                <img src={bgForm} alt="" className="h-[300px] " />
+                <div className="tab-dang-nhap  ">
                   <img src={tabDangNhap} alt="" />
                 </div>
                 <button
                   onClick={() => handleLoginClick()}
-                  className="button-login"
+                  className="button-login py-6 md:py-0"
                 >
                   <img src={buttonLogin} alt="" />
                 </button>

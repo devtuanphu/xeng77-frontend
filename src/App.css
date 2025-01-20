@@ -8,6 +8,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+img,
+video {
+  max-width: auto !important;
+}
 .slogan {
   color: #f4e4a1;
   text-transform: uppercase;
