@@ -1,6 +1,6 @@
 import "./App.css";
 import Slider from "./components/Slider";
-import logo from "./assets/images/apple-icon.png";
+import logo from "./assets/images/logo-199.png";
 import bgForm from "./assets/images/bg-form.webp";
 import tabDangNhap from "./assets/images/tab-dang-nhap.png";
 import buttonLogin from "./assets/images/button-login-2.png";
@@ -25,17 +25,15 @@ function App() {
           <div className="flex justify-center pt-[70px]">
             <img src={logo} alt="" width={135} />
           </div>
-          <div className="flex justify-center pt-4">
-            <h1 className="slogan">Chơi là nhất</h1>
-          </div>
+
           <div className="grid grid-cols-12 gap-4 pt-[20px]">
-            <div className="col-span-12 md:col-span-4">
+            <div className="col-span-12 md:col-span-4 hidden md:block">
               <div className="flex justify-center">
                 <Slider />
               </div>
             </div>
             <div className="col-span-12 md:col-span-4">
-              <div className="flex justify-center box-login">
+              <div className="flex justify-center box-login p-10 md:p-0">
                 <img src={bgForm} alt="" />
                 <div className="tab-dang-nhap">
                   <img src={tabDangNhap} alt="" />
@@ -46,7 +44,7 @@ function App() {
                 >
                   <img src={buttonLogin} alt="" />
                 </button>
-                <div className="logForm">
+                <div className="logForm mt-8 md:mt-0">
                   <div class="form-group">
                     <div class="instyle">
                       <input
@@ -79,7 +77,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-4">
+            <div className="col-span-12 md:col-span-4 hidden md:block">
               <div className="flex flex-col justify-center items-center mx-auto gap-4 h-full">
                 <img src={IconFB} alt="" width="200px" />
                 <img src={IconLiveChat} alt="" width="200px" />
