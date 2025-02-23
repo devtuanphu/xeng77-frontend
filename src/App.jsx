@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Slider from "./components/Slider";
 import logo from "./assets/images/logo-199.png";
 import bgForm from "./assets/images/bg-form.webp";
@@ -10,13 +11,29 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import IconFB from "./assets/images/icon-fb.png";
 import IconLiveChat from "./assets/images/icon-livechat.png";
 import IconTele from "./assets/images/icon-tele.png";
+import { login } from "./services/user";
 
 function App() {
-  const handleLoginClick = () => {
-    // Set trạng thái tương tác vào localStorage
-    localStorage.setItem("userInteracted", "true");
-    // Chuyển hướng đến game
-    window.location.href = "/games/index.html";
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const handleLoginClick = async () => {
+    try {
+      const response = await login(username, password);
+      if (response && response.data) {
+        const { uuid } = response.data;
+
+        // Lưu thông tin người dùng vào localStorage
+        localStorage.setItem("userUUID", uuid);
+        // Lưu trạng thái đã tương tác vào localStorage
+        localStorage.setItem("userInteracted", "true");
+
+        // Chuyển hướng đến trang game hoặc trang chủ
+        window.location.href = "/games/index.html";
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      alert("Đăng nhập không thành công, vui lòng thử lại.");
+    }
   };
   return (
     <>
@@ -55,6 +72,8 @@ function App() {
                         name="username"
                         placeholder="Tên đăng nhập"
                         autocomplete="off"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                       />
                     </div>
                     <i class="fas fa-user"></i>
@@ -70,6 +89,8 @@ function App() {
                         name="password"
                         placeholder="Mật khẩu"
                         autocomplete="off"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>
                     <FontAwesomeIcon icon={faLock} className="icon-input-2" />
